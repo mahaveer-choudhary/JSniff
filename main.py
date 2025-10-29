@@ -125,7 +125,7 @@ def scan(url, custom_headers) -> None:
                 print(f"\n{GREEN}{RESET} {YELLOW}{key}{RESET} found in {CYAN}{url}{RESET}: {matches}\n")
 
     except Exception as e : 
-        print(f"{RED}[!] Error scanning {url}: {e}{RESET}")
+        print(f"{RED}[!] Error{RESET} scanning {url}: {RED}{e}{RESET}")
 
 
 def perform_check(args): 
@@ -153,7 +153,8 @@ def perform_check(args):
             return False
         
     except exceptions.ConnectionError as con_error: 
-        print(f"{RED}[!]{RESET} {url} {RED}Connection Error:{RESET} {con_error}")
+        # print(f"{RED}[!]{RESET} {url} {RED}Connection Error:{RESET} {con_error}")
+        print(f"{RED}[!]Connection Error:{RESET} {con_error}")
 
     except exceptions.InvalidURL as invalid_error: 
         print(f"{RED}[!]{RESET} Invalid URL {url}: {RED}{invalid_error}{Style.RESET_ALL}")
