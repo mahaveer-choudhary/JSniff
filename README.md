@@ -29,7 +29,7 @@ A Python tool for scanning JavaScript files in web applications to detect expose
 Clone the repository and install the packages 
 
 ```bash
-git clone github.com/mahaveer-choudhary/secret-scanner
+git clone github.com/mahaveer-choudhary/JSniff
 ```
 ```bash
 cd secret-scanner
